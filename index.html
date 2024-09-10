@@ -8,21 +8,50 @@
     <script src="index.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col items-center justify-center bg-lime-900 text-white ">
-    <header class="w-screen md:w-4/5 flex justify-center items-center flex-col py-4">
+<body class="flex flex-col items-center justify-center bg-lime-900 text-white relative ">
+    <header class="w-screen md:w-4/5 flex justify-center items-center flex-col py-4 bg-blue-700 h-1/5" >
         <h2 class="text-3xl font-black">
             Movies App
         </h2>
     </header>
   
-    <main class=" ">
-        <label for="movie">
-            Enter movie 
-        </label>
+    <main class=" bg-slate-500 w-screen md:w-4/5 flex  items-center flex-col pb-32 min-h-96">
+        <div class="flex items-start justify-center flex-col w-screen bg-slate-500 md:w-4/5 px-2 border-b-2">
+            <label for="movie-input" class="text-xl tracking-wider pb-2">
+                Enter movie : 
+            </label>
+            <input id="movie-input" type="text" placeholder="Movie Title" class="py-2 pl-3 pr-2 focus:bg-gray-600 border-0 focus:border-0 focus:outline-0 text-xl w-92 tracking-wider">
+            <button class="px-4 py-2 bg-blue-700 text-lg font-semibold text-center my-4 w-32 rounded" id="save-btn">
+                SAVE
+            </button>
+        </div>
+
+        <div class="movie-list ">
+            <div class="heading text-center text-2xl font-semibold pt-2">
+                Your Movies
+            </div>
+            <ul class="w-screen pl-8 list-decimal text-lg tracking-wide " id="movie-ul">
+                <p class="text-xl font-semibold px-4 text-red-800 mt-2 hidden" id="error-p">
+                    Oops! You have no movies.
+                </p>
+            </ul>
+        </div>
+
         
     </main>
 
-    <a href="new.html" target="_blank">link</a>
+    <footer class="flex flex-col items-center justify-center bg-blue-700 w-screen h-24">
+        <div class="text-center text-xl">
+            <span class="copyright-symbol">&copy;</span><span class="year">
+                2024
+            </span>
+            <span class="owner">
+                Carlwenzi
+            </span>
+        </div>
+        
+    </footer>
+   
 
 </body>
 </html>
