@@ -8,50 +8,45 @@
     <script src="index.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col items-center justify-center bg-lime-900 text-white relative ">
-    <header class="w-screen md:w-4/5 flex justify-center items-center flex-col py-4 bg-blue-700 h-1/5" >
-        <h2 class="text-3xl font-black">
-            Movies App
-        </h2>
+<body class="bg-purple-500 flex flex-col items-center ">
+    <header class="bg-blue-700 w-screen md:w-3/5 py-4">
+        <h1 class=" text-3xl font-bold text-center">
+            MOVIES MEMORY APP
+        </h1>
     </header>
-  
-    <main class=" bg-slate-500 w-screen md:w-4/5 flex  items-center flex-col pb-32 min-h-96">
-        <div class="flex items-start justify-center flex-col w-screen bg-slate-500 md:w-4/5 px-2 border-b-2">
-            <label for="movie-input" class="text-xl tracking-wider pb-2">
-                Enter movie : 
-            </label>
-            <input id="movie-input" type="text" placeholder="Movie Title" class="py-2 pl-3 pr-2 focus:bg-gray-600 border-0 focus:border-0 focus:outline-0 text-xl w-92 tracking-wider">
-            <button class="px-4 py-2 bg-blue-700 text-lg font-semibold text-center my-4 w-32 rounded" id="save-btn">
-                SAVE
-            </button>
-        </div>
-
-        <div class="movie-list ">
-            <div class="heading text-center text-2xl font-semibold pt-2">
-                Your Movies
-            </div>
-            <ul class="w-screen pl-8 list-decimal text-lg tracking-wide " id="movie-ul">
-                <p class="text-xl font-semibold px-4 text-red-800 mt-2 hidden" id="error-p">
-                    Oops! You have no movies.
+    <main class="bg-green-600 w-screen md:w-3/5">
+        <div class="input-sect border-b-4">
+            <div class="entry-sect flex flex-col px-4 py-4 ">
+                <label for="movie" class="text-xl font-bold tracking-wider pt-4 pb-2 text-white">Enter Movie :</label>
+                <input type="text" id="movie" placeholder="Movie" class="pl-4 pr-2 py-2 border-0 outline-0 focus:border-0 focus:outline-0 rounded-lg leading-relaxed text-xl tracking-wider font-semibold  ">
+                <p class="text-red-800 text-xl hidden font-semibold tracking-wider pt-2" id="error-p">
+                    Movie title cannot be empty! Please enter a value to proceed.
                 </p>
+            </div>
+            <div id="buttons" class="  flex justify-start gap-x-4 pl-4 pb-4">
+                <button id="save" class="bg-blue-700 px-4 py-2 text-lg font-bold rounded-lg">
+                    SAVE
+                </button>
+                <button id="delete" class="px-4 py-2 bg-red-800 text-lg font-bold rounded-lg">
+                    DELETE ALL
+                </button>
+            </div>
+        </div>
+        <div class="display-sect pt-2 min-h-80">
+            <h3 class="text-center text-xl font-bold text-white">
+                Your Movies
+            </h3>
+            <p id="no-movie-error" class="text-red-800 text-3xl hidden font-semibold tracking-wider pt-2 pl-8">
+                Ooops! You have no Movies!
+            </p>
+            <ul class="pl-8 list-decimal text-xl tracking-wide" id="display-ul">
             </ul>
         </div>
-
-        
     </main>
-
-    <footer class="flex flex-col items-center justify-center bg-blue-700 w-screen h-24">
-        <div class="text-center text-xl">
-            <span class="copyright-symbol">&copy;</span><span class="year">
-                2024
-            </span>
-            <span class="owner">
-                Carlwenzi
-            </span>
-        </div>
-        
+    <footer class="bg-blue-700 flex justify-center min-h-20 w-screen md:w-3/5 items-center">
+        <p class="text-lg font-bold tracking-wider">
+            &copy;Carlwenzi 2024
+        </p>
     </footer>
-   
-
 </body>
 </html>
