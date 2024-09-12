@@ -56,3 +56,5 @@ function renderMovies(arr) {
     displayUl.innerHTML = MovieListItems 
 }
 
+
+//to add checking if movie exists already
